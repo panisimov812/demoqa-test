@@ -32,7 +32,8 @@ public class Junit5Tests {
         $("[id=permanentAddress]").setValue("test Address 33");
         $("[id=submit]").click();
 
+        //Asserts
         $("[id=output] [id=name]").shouldHave(text(name));
-       // $("[id=output]").$("[id=name]").shouldHave(text(name));
+        $("[id=permanentAddress]",1).shouldHave(text("test Address 33"));
     }
 }
