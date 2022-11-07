@@ -4,7 +4,7 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.*;
 
-public class SimpleTest {
+public class SimpleTests {
 
     @BeforeAll
     static void initDB(){
@@ -23,13 +23,21 @@ public class SimpleTest {
     }
 
     @AfterAll
-
-    @Test
-    void assertTest(){
+    static void cleanDB(){
+        System.out.println("###    AfterAll");
     }
 
     @Test
+    void assertTest(){
+        System.out.println("###         Test 0");
+    }
+
+    @Test
+    void assertTest1(){
+        System.out.println("###         Test 1");
+    }
+    @Test
     void assertTest2(){
-        Assertions.assertTrue(2<3);
+        System.out.println("###         Test 3");
     }
 }
