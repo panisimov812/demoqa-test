@@ -47,5 +47,8 @@ public class CssXpathExamples {
         $x("//div[text()[contains(.,'ello qa.gur')]]");
         $(byText("Hello qa.guru"));
         $(withText("ello qa.gur"));
+
+        //Поднимиться выше к родителю parent()
+        $("#gender-radio-3").parent().click(); //поднимится выше к родителю
     }
 }

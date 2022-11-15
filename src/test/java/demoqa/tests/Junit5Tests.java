@@ -1,4 +1,4 @@
-package demoqa;
+package demoqa.tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -20,7 +20,7 @@ public class Junit5Tests {
 
     @Test
     void fillFormTest() {
-        // 1:45:10
+
         String name = "Test Name";
         String email = "test@email.de";
         String address = "test Address 3";
