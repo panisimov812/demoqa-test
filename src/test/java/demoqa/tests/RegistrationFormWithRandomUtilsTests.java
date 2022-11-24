@@ -7,12 +7,13 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static demoqa.docks.RandomUtilsExamples.*;
 import static java.lang.String.format;
 
-public class RegistrationFormWithRandomUtilsDataTests {
-    String name = "TestName";
-    String lastName = "TestLastName";
-    String email = "test@test.ru";
+public class  RegistrationFormWithRandomUtilsTests {
+    String name = getRandomString(10);
+    String lastName = getRandomString(10);
+    String email = getRandomEmail();
     String phone = "1234567890";
 
     String expectedFullName = format("%s $s",name,lastName);
